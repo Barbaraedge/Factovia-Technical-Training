@@ -1,0 +1,3 @@
+services:
+  testapp:
+    build: ./imageSource

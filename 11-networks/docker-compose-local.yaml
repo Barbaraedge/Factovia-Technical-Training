@@ -1,0 +1,20 @@
+services:
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    env_file:
+      - grafana.env
+    volumes:
+      - grafana-data:/var/lib/grafana
+    networks:
+      - barbaraServices
+
+volumes:
+  grafana-data:
+
+networks:
+  barbaraServices:
+    driver: bridge
+    name: barbaraServices
+    external: true

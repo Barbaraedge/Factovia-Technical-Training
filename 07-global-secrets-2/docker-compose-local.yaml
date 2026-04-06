@@ -1,0 +1,5 @@
+services:
+  printmessage:
+    build: .
+    env_file:
+      - secrets.env

@@ -1,0 +1,7 @@
+services:
+  testapp:
+    build: ./imageSource
+    env_file:
+      - barbarasecrets.env
+    volumes:
+    - ./appconfigDev:/appconfig
